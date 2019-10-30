@@ -4,7 +4,7 @@
   "host": "localhost:3001",
   "protocol": "http",
   "allowedOrigins": ["*"],
-  "domain": "http://localhost:3001",
+  "domain": "http://formio.grupopuntacana.com:3001",
   "basePath": "",
   "mongo": "mongodb://localhost:27017/formioapp",
   "mongoConfig": "",
