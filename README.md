@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![Join the chat at https://gitter.im/formio/formio](https://badges.gitter.im/formio/formio.svg)](https://gitter.im/formio/formio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![StackOverflow](https://www.codewake.com/badges/codewake2.svg)](http://stackoverflow.com/tags/formio)
 
@@ -120,3 +121,7 @@ Security
 =========
 If you find and/or think you have found a Security issue, please quietly disclose it to security@form.io, and give us
 sufficient time to patch the issue before disclosing it publicly.
+=======
+# formio
+Formio for grupo punta cana 
+>>>>>>> 6bd7b511509db4ecc8f546308d353e08d2617f54
