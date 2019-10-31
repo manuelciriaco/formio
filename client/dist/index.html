@@ -13,6 +13,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ext-language_tools.js"></script>
   <link rel="stylesheet" href="styles/app-86bcba9989.css">
   <link rel="stylesheet" href="styles/vendor-0ffa131bfe.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+  
 </head>
 
 <body>
@@ -28,7 +33,8 @@
           onclick="window.location.reload(true)"><img src="assets/images/gpc.png"></a></div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li ng-if="authenticated" class="active"><a href="#/">Home</a></li>
+          <li ng-if="authenticated" class="active"><a href="#/">Inicio</a></li>
+          <li ng-if="authenticated"><a href="#/">Reportería</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li ng-if="authenticated"><a href="#" ng-click="logout()"><span class="glyphicon glyphicon-off"

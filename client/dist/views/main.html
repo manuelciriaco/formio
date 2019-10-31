@@ -4,15 +4,15 @@
       <div class="panel-heading">
         <h3 class="panel-title">
           <i class="fa fa-database"></i>
-          <span>Resources</span>
+          <span>Recursos</span>
           <a class="pull-right" href="http://help.form.io/userguide/#resources" target="_blank"><i class="glyphicon glyphicon-question-sign "></i></a>
         </h3>
       </div>
       <div class="panel-body">
         <i id="resource-loader" ng-if="resourcesLoading" style="font-size: 2em;" class="fa fa-spinner fa-pulse"></i>
-        <div class="well" ng-show="!resourcesLoading">
+        <!-- <div class="well" ng-show="!resourcesLoading">
           Resources are the objects within your Project. Example: User, Company, Vehicle, etc.
-        </div>
+        </div> -->
         <div class="form-inline" style="margin-bottom: 20px;">
           <div class="form-group" style="width:100%;">
             <div class="input-group">
@@ -61,15 +61,15 @@
       <div class="panel-heading">
         <h3 class="panel-title">
           <i class="fa fa-file-text-o"></i>
-          <span>Forms</span>
+          <span>Formularios</span>
           <a class="pull-right" href="http://help.form.io/userguide/#forms" target="_blank"><i class="glyphicon glyphicon-question-sign "></i></a>
         </h3>
       </div>
       <div class="panel-body">
         <i id="form-loader" ng-if="formsLoading" style="font-size: 2em;" class="fa fa-spinner fa-pulse"></i>
-        <div class="well" ng-show="!formsLoading">
+        <!-- <div class="well" ng-show="!formsLoading">
           Forms serve as a composite input interface for Resources as well as free-form user input. Example: Login Form, Contact Form, etc.
-        </div>
+        </div> -->
         <div class="form-inline" style="margin-bottom: 20px;width: 100%;">
           <div class="form-group" style="width: 100%;">
             <div class="input-group">
@@ -92,7 +92,7 @@
                 <div class="col-sm-4">
                   <div class="button-group pull-right" style="display:flex;">
                     <a ui-sref="form.edit({formId: form._id})" class="btn btn-default btn-xs alink"><span class="glyphicon glyphicon-edit"></span> Editar</a>&nbsp;
-                    <button class="btn btn-default btn-xs btn-ver"><span class="glyphicon glyphicon-eye"></span> Ver</button>&nbsp;
+                    <button class="btn btn-default btn-xs btn-ver"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>&nbsp;
                     <a ui-sref="form.delete({formId: form._id, formType: 'form'})"  class="btn btn-default btn-xs"><span class="glyphicon glyphicon-trash"></span></a>
                   </div>
                 </div>
