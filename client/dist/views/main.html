@@ -119,11 +119,10 @@
   $(document).ready(function () {
     
     setTimeout(function(){
-      alert(1);
       $('.btn-ver').on('click',function(){
         console.log($(this));
         window.open('https://formio.grupopuntacana.com/views/api.html#' + ($(this).parent().find('a.alink').attr('href').replace('#/form/','').replace('/edit','')) )
       } )
-    },3000); 
+    },1500); 
   });
 </script>
