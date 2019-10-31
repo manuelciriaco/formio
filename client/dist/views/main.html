@@ -116,6 +116,13 @@
   </div>
 </div>
 <script>
+var app = angular.module("app", []);
+
+app.controller('mainController', [function() {
+  this.goToForm = function() {
+    alert("Iam from angular controller");
+  }
+}]);
 function goToForm(i){
   alert(i);
   console.log(i);
