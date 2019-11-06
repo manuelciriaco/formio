@@ -21,18 +21,24 @@
     </div>
 </div>
 <script>
-    var src = "https://formio.grupopuntacana.com/form/",
-        fr = void 0 === (fr = window.location.hash.split("#"))[1] ? "" : fr[1];
-    Formio.icons = "fontawesome";
-    var formio = Formio.createForm(document.getElementById("formio"), src + fr, {
-        readOnly: !1
-    }).then(o => {
-        o.on("submit", o => {
-            src = "https://formio.grupopuntacana.com/form/5da64c4b0c7c3605cfeff455/";
-            Formio.createForm(document.getElementById("formio"), src, {
-                readOnly: !1
-            });
-            console.log("Aqui va el hook donde se le enviaran los datos al api.")
-        })
+    $(document).ready(function () {
+        fillDocument();
     });
+
+    function fillDocument(){
+        var src = "https://formio.grupopuntacana.com/form/",
+        fr = void 0 === (fr = window.location.hash.split("#"))[1] ? "" : fr[1];
+        Formio.icons = "fontawesome";
+        var formio = Formio.createForm(document.getElementById("formio"), src + fr, {
+            readOnly: !1
+        }).then(o => {
+            o.on("submit", o => {
+                src = "https://formio.grupopuntacana.com/form/5da64c4b0c7c3605cfeff455/";
+                Formio.createForm(document.getElementById("formio"), src, {
+                    readOnly: !1
+                });
+                console.log("Aqui va el hook donde se le enviaran los datos al api.")
+            })
+        });
+    }
 </script>
