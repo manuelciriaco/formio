@@ -20,69 +20,39 @@ class Api extends REST_Controller {
 
     }
 
-    public function solicitudes_get(){
-        $this->response(array('status'=>$this->get("status")));
-    }
-
-    public function recetas_post(){
+    public function form_post(){
         header('Access-Control-Allow-Origin: *');
         header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
         header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
         //Notificar que hay receta disponible. 
-        nueva_receta();
         $json = file_get_contents('php://input');
         // Converts it into a PHP object
         $data = json_decode($json);
 
-        $receta = array(
-            'uniqueid' => isset($data->uniqueid)?$data->uniqueid:0,
-        );     
+        $form = array(
+            'id_tipo'       => isset($data->id_tipo)?$data->id_tipo:'',
+            'campos_json'   => isset($data->campos_json)?$data->campos_json:'',
+            'campo1'       => isset($data->campo1)?$data->campo1:'',
+            'campo2'       => isset($data->campo2)?$data->campo2:'',
+            'campo3'       => isset($data->campo3)?$data->campo3:'',
+            'campo4'       => isset($data->campo4)?$data->campo4:'',
+            'campo5'       => isset($data->campo5)?$data->campo5:'',
+            'campo6'       => isset($data->campo6)?$data->campo6:'',
+            'campo7'       => isset($data->campo7)?$data->campo7:'',
+            'campo8'       => isset($data->campo8)?$data->campo8:'',
+            'estado'       => isset($data->estado)?$data->estado:'',
+            'usuario'       => isset($data->usuario)?$data->usuario:'',
+        );  
+        
+        $r = $this->db->insert('gpc_forms', $form);
 
         //Aqui insert 
         $temp = array(
-            'status' => false,
+            'status' => ($r)?true:false,
         );
         $this->response($temp);
-    }
-
-    public function recetas_put(){
-        $p = array('userid'=>$this->put('userid'));
-        $this->response($p);
-    }  
-    
-    public function shopper_get(){
-        if (isset($_SERVER['HTTP_ORIGIN'])) {
-            // should do a check here to match $_SERVER['HTTP_ORIGIN'] to a
-            // whitelist of safe domains
-            header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
-            header('Access-Control-Allow-Credentials: true');
-            header('Access-Control-Max-Age: 86400');    // cache for 1 day
-        }
-
-        $ret = array(
-            'status' => true, 
-            'count' => 0, 
-            'shopper' => array()
-        );
-        $sp = $this->db->select('title,imgUrl')->from('shopper')->get()->result_array();
-        $ret['count']   = count($sp);
-        $ret['shopper'] = (count($sp) > 0) ? $sp : array() ;
-        
-        $this->response($ret);
-    }
-
-    public function cupones_get(){
-        $ret = array(
-            'status' => true, 
-            'count' => 0, 
-            'cupones' => array()
-        );
-        $sp = $this->db->select('title,imgUrl')->from('cupones')->get()->result_array();
-        $ret['count']   = count($sp);
-        $ret['cupones'] = (count($sp) > 0) ? $sp : array() ;
-        
-        $this->response($ret);
-    }    
+    } 
+  
 }

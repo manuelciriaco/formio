@@ -24,5 +24,9 @@ class Forms extends CI_Controller {
 			'content' => 'forms/list_view',
 		);
 		$this->load->view('includes/template', $this->data); 
-	}
+    }
+    
+    public function list(){
+        $this->load->view('forms/list_view');
+    }
 }

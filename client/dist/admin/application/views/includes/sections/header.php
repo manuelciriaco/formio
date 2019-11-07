@@ -35,8 +35,8 @@
                                                              onclick="window.location.reload(true)"><img src="assets/images/gpc.png"></a></div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li ng-if="authenticated" class="active"><a href="#/">Inicio</a></li>
-                <li ng-if="authenticated"><a href="#/">Reportería</a></li>
+                <li ng-if="authenticated" ><a href="#/">Inicio</a></li>
+                <li ng-if="authenticated" class="active"><a href="#/">Administración</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li ng-if="authenticated"><a href="#" ng-click="logout()"><span class="glyphicon glyphicon-off"
