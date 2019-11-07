@@ -52,7 +52,7 @@ module.exports = function(router) {
     router.formio.cache.loadFormByAlias(req, alias, function(error, form) {
       if (error) {
         debug(`Error: ${error}`);
-        return res.status(400).send('Invalid alias');
+        return res.status(400).send('Invalid alias v2');
       }
       if (!form) {
         return res.status(404).send('Form not found.');
