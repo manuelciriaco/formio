@@ -5,15 +5,12 @@
 	);
 ?>
 <?php $this->load->view('includes/sections/header', $data);?>
-<input type="hidden" name="base_url" id="base_url" value="<?php echo base_url('index.php');?>/"/>
 
 <div class="content-wrapper">
 	<div class="div-principal-wrapper wrapper wrapper-content" id="div-principal-wrapper">
-		<div id="tabs">
-		  <ul class="nav nav-tabs">
-		  	
-		  </ul>
-		</div>
+        <h1> hola mundo </h1>
 	</div>
 </div>
+
+
 <?php $this->load->view('includes/sections/footer', $data);?>
