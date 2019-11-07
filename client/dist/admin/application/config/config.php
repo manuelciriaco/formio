@@ -23,7 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://apps/gpcFormioApi/f/client/dist/admin';
+$config['base_url'] = 'https://formio.grupopuntacana.com/admin';
+//$config['base_url'] = 'http://apps/gpcFormioApi/f/client/dist/admin';
+
 
 /*
 |--------------------------------------------------------------------------

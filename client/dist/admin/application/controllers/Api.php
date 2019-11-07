@@ -32,20 +32,21 @@ class Api extends REST_Controller {
         $data = json_decode($json);
 
         $form = array(
-            'id_tipo'       => isset($data->id_tipo)?$data->id_tipo:'',
-            'campos_json'   => isset($data->campos_json)?$data->campos_json:'',
-            'campo1'       => isset($data->campo1)?$data->campo1:'',
-            'campo2'       => isset($data->campo2)?$data->campo2:'',
-            'campo3'       => isset($data->campo3)?$data->campo3:'',
-            'campo4'       => isset($data->campo4)?$data->campo4:'',
-            'campo5'       => isset($data->campo5)?$data->campo5:'',
-            'campo6'       => isset($data->campo6)?$data->campo6:'',
-            'campo7'       => isset($data->campo7)?$data->campo7:'',
-            'campo8'       => isset($data->campo8)?$data->campo8:'',
-            'estado'       => isset($data->estado)?$data->estado:'',
-            'usuario'       => isset($data->usuario)?$data->usuario:'',
+            'id_tipo'       => $this->input->get_post('id_form')?$this->input->get_post('id_form'):'',
+            'id_form'       => $this->input->get_post('id_form')?$this->input->get_post('id_form'):'',
+            'campos_json'   => $this->input->get_post('campos_json')?$this->input->get_post('campos_json'):'',
+            'campo1'       => $this->input->get_post('campo1')?$this->input->get_post('campo1'):'',
+            'campo2'       => $this->input->get_post('campo2')?$this->input->get_post('campo2'):'',
+            'campo3'       => $this->input->get_post('campo3')?$this->input->get_post('campo3'):'',
+            'campo4'       => $this->input->get_post('campo4')?$this->input->get_post('campo4'):'',
+            'campo5'       => $this->input->get_post('campo5')?$this->input->get_post('campo5'):'',
+            'campo6'       => $this->input->get_post('campo6')?$this->input->get_post('campo6'):'',
+            'campo7'       => $this->input->get_post('campo7')?$this->input->get_post('campo7'):'',
+            'campo8'       => $this->input->get_post('campo8')?$this->input->get_post('campo8'):'',
+            'estado'       => $this->input->get_post('estado')?$this->input->get_post('estado'):'',
+            'usuario'       => $this->input->get_post('usuario')?$this->input->get_post('usuario'):'',
         );  
-        
+        //var_dump($form);
         $r = $this->db->insert('gpc_forms', $form);
 
         //Aqui insert 
