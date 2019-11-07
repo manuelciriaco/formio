@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Formio - Grupo Punta Cana</title>
+    <title><?php echo (isset($title)) ? $title : "FormIO - GPC" ;?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet" type="text/css"> -->
