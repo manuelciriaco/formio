@@ -4,9 +4,7 @@
 		'method' => $this->uri->segment(2)
 	);
 ?>
-<?php $this->load->theme_view('includes/sections/header', $data);?>
-
-<?php $this->load->theme_view('includes/sections/sidebar',array() );?>
+<?php $this->load->view('includes/sections/header', $data);?>
 <input type="hidden" name="base_url" id="base_url" value="<?php echo base_url('index.php');?>/"/>
 
 <div class="content-wrapper">
@@ -18,4 +16,4 @@
 		</div>
 	</div>
 </div>
-<?php $this->load->theme_view('includes/sections/footer', $data);?>
+<?php $this->load->view('includes/sections/footer', $data);?>
