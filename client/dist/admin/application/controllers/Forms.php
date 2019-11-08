@@ -39,7 +39,13 @@ class Forms extends CI_Controller {
     }
 
     public function answers($id){
+
         $data = $this->Answers->getAnswers($id);
+//        $data = array(
+//          'data' => $result
+//        );
+
+        $this->load->view('forms/answers', compact('data'));
 
     }
 }

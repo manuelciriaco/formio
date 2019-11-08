@@ -5,8 +5,8 @@
 </section>
 
 <section class="content" style="min-height:200px;">
-  <div class="box">
-    <table id="tblForms" name="tblForms" class="table">
+  <div class="box centered">
+    <table id="tblForms" name="tblForms" class="table table table-hover table-striped table-responsive">
         <thead>
           <th>ID</th>
           <th>NOMBRE</th>
@@ -69,6 +69,8 @@
   }
 
   function loadAnswers(id){
+
+      load_screen($("#base_url").val() + "index.php", "forms/answers/"+id, "57_tag", !0, "1")
 
   }
 </script>
