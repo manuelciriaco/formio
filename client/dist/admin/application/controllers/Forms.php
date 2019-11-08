@@ -18,6 +18,14 @@ class Forms extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+    function __Construct(){
+        parent::__Construct ();
+        $this->load->database(); // load database
+        $this->load->model('Answers'); // load model
+    }
+
+
 	public function index()
 	{
         $this->data = array(
@@ -28,5 +36,10 @@ class Forms extends CI_Controller {
     
     public function list(){
         $this->load->view('forms/list_view');
+    }
+
+    public function answers($id){
+        $data = $this->Answers->getAnswers($id);
+
     }
 }

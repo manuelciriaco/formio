@@ -69,7 +69,6 @@
   }
 
   function loadAnswers(id){
-       //load_screen($("#base_url").val() + "index.php", "forms/list", "57_tag", !0, "1")
-   alert(id); 
+
   }
 </script>
