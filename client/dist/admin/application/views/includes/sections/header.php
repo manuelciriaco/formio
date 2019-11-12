@@ -12,9 +12,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ext-language_tools.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ext-language_tools.js"></script>
+    <script src="assets/scripts/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/styles/app-86bcba9989.css">
     <link rel="stylesheet" href="assets/styles/vendor-0ffa131bfe.css">
+
     <!--
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
